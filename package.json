@@ -10,5 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1"
   }
 }
