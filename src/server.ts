@@ -1,18 +1,23 @@
 import mongoose from 'mongoose'
 import app from './app'
-import config from './config'
+import config from './config/index'
 
 async function mainBootstrap() {
   try {
     await mongoose.connect(config.databaseUrl as string)
-    app.listen(config.port, () => {
-      console.log(`Example app listening on port ${config.port}`)
-    })
-    console.log('Database is connected')
-  } catch (err) {
-    console.log('Failed to connect Database', err)
-  }
+    // eslint-disable-next-line no-console
+    console.log(`🛢   Database is connected successfully`)
 
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+    app.listen(config.port, () => {
+      // eslint-disable-next-line no-console
+      console.log(`Application  listening on port ${config.port}`)
+    })
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log('Failed to connect database', err)
+  }
 }
+
+// use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+
 mainBootstrap()
