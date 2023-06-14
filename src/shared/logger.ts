@@ -1,6 +1,7 @@
 import path from 'path';
 import { createLogger, format, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
+import config from '../config';
 const { combine, timestamp, label, printf } = format;
 // custom log formate
 
@@ -15,45 +16,48 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 const logger = createLogger({
   level: 'info',
   format: combine(label({ label: 'UMP' }), timestamp(), myFormat),
-  transports: [
-    new transports.Console(),
-
-    new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'logs',
-        'winston',
-        'successes',
-        'ump-%DATE%.success.log'
-      ),
-      datePattern: 'YYYY-MM-DD-HH',
-      zippedArchive: true,
-      maxSize: '20m',
-      maxFiles: '14d',
-    }),
-  ],
+  // save log file based on condition
+  transports:
+    config.env === 'production'
+      ? [
+          new DailyRotateFile({
+            filename: path.join(
+              process.cwd(),
+              'logs',
+              'winston',
+              'successes',
+              'ump-%DATE%.success.log'
+            ),
+            datePattern: 'YYYY-MM-DD-HH',
+            zippedArchive: true,
+            maxSize: '20m',
+            maxFiles: '14d',
+          }),
+        ]
+      : [new transports.Console()],
 });
 
 const errorLogger = createLogger({
   level: 'error',
   format: combine(label({ label: 'UMP' }), timestamp(), myFormat),
-  transports: [
-    new transports.Console(),
-
-    new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'logs',
-        'winston',
-        'errors',
-        'ump-%DATE%.error.log'
-      ),
-      datePattern: 'YYYY-MM-DD-HH',
-      zippedArchive: true,
-      maxSize: '20m',
-      maxFiles: '14d',
-    }),
-  ],
+  transports:
+    config.env === 'production'
+      ? [
+          new DailyRotateFile({
+            filename: path.join(
+              process.cwd(),
+              'logs',
+              'winston',
+              'errors',
+              'ump-%DATE%.error.log'
+            ),
+            datePattern: 'YYYY-MM-DD-HH',
+            zippedArchive: true,
+            maxSize: '20m',
+            maxFiles: '14d',
+          }),
+        ]
+      : [new transports.Console()],
 });
 
 export { logger, errorLogger };

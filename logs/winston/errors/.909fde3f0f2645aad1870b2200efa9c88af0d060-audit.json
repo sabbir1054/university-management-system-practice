@@ -6,14 +6,9 @@
     "auditLog": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\errors\\.909fde3f0f2645aad1870b2200efa9c88af0d060-audit.json",
     "files": [
         {
-            "date": 1686734957187,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\errors\\ump-2023-06-14-15.error.log",
-            "hash": "632d456b2675229c4ba9c3a03a6b91d56fe84ff253cb6d48bf7f3ff358bc93f6"
-        },
-        {
-            "date": 1686740976906,
+            "date": 1686742587140,
             "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\errors\\ump-2023-06-14-17.error.log",
-            "hash": "d7a171c9a3aa595249d06c60819053f7eb73c9fe21ef84af3321b0bfaef653cf"
+            "hash": "b336300e08e2e213bbf15399729f86b97f591227e714187ce38dce894da715a8"
         }
     ],
     "hashType": "sha256"
