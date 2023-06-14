@@ -1,0 +1,12 @@
+Wed Jun 14 2023 17:9:36 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:9:52 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:9:55 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:9:58 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:10:4 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:10:8 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:10:21 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:10:53 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:10:59 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:11:3 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:11:5 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
+Wed Jun 14 2023 17:18:10 } [UMP] error: Unhandled Rejection Detected, we are closing our server

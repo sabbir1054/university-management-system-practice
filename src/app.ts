@@ -15,8 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1/users/', UserRoutes);
 
 // testing
-app.get('/', (req: Request, res: Response) => {
+app.get('/', async (req: Request, res: Response) => {
   res.send('Server is running');
+  // Promise.reject(new Error('Unhandled Promise Rejection'));
 });
 
 // global error handler middleware
