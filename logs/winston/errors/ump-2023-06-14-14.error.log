@@ -1,4 +1,0 @@
-Wed Jun 14 2023 14:27:18 } [Error Logger ] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
-Wed Jun 14 2023 14:27:21 } [Error Logger ] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
-Wed Jun 14 2023 14:27:35 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net
-Wed Jun 14 2023 14:29:4 } [UMP] error: Failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.pe8bb.mongodb.net

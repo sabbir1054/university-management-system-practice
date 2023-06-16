@@ -1,45 +1,15 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
-    },
-    "auditLog": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\.2505477037bdc97b58707989b31a8190cf1e011b-audit.json",
-    "files": [
-        {
-            "date": 1686680305438,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-00.success.log",
-            "hash": "d7f26d8de95340835f1fd6a39216e077f0b7fba519261e32d32c8b8c7ae18b4b"
-        },
-        {
-            "date": 1686715970363,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-10.success.log",
-            "hash": "a9500ce6d80f49fd75317a60e5496358708f9b951350b92db330b8861338fe1f"
-        },
-        {
-            "date": 1686721790133,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-11.success.log",
-            "hash": "9ea570b329b76393128bf687308028dce841ee409e6a7859ef24fa290fcf0228"
-        },
-        {
-            "date": 1686722499654,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-12.success.log",
-            "hash": "59897d0152a3049480223b81a40a78720e2541e234d2502314ec0fc3e2dcb489"
-        },
-        {
-            "date": 1686726104890,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-13.success.log",
-            "hash": "9a86663a4615245a23ca0a0beb633f724d141ddf61a2ed416082f0484dc3fc3f"
-        },
-        {
-            "date": 1686731183968,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-14.success.log",
-            "hash": "c9da772a38bd2fad1d08d21944b995735632b33e06cf429e8905eec996ba0cac"
-        },
-        {
-            "date": 1686733231334,
-            "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-15.success.log",
-            "hash": "8f294a6d4823f07b294b6eb1e814125350de8cea324ba4692486c3d3b53c3cfc"
-        }
-    ],
-    "hashType": "sha256"
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\.2505477037bdc97b58707989b31a8190cf1e011b-audit.json",
+  "files": [
+    {
+      "date": 1686742587132,
+      "name": "F:\\PH Practice L2\\big-project1\\univarsity-management-project\\university-management-auth-service\\logs\\winston\\successes\\ump-2023-06-14-17.success.log",
+      "hash": "2f74c39c2f332962de118685a500e5fe7fddc1437a5e6c48783d20f7b206a564"
+    }
+  ],
+  "hashType": "sha256"
 }
