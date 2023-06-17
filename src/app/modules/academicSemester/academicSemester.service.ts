@@ -1,8 +1,13 @@
+import httpStatus from 'http-status';
 import { SortOrder } from 'mongoose';
+import ApiError from '../../../errors/ApiErrors';
 import { paginationHelpers } from '../../../helpers/paginationHelpers';
 import { IGenericResponse } from '../../../interfaces/common';
 import IPaginationOptions from '../../../interfaces/paginations';
-import { academicSemesterSearchableFields } from './academicSemester.constant';
+import {
+  academicSemesterSearchableFields,
+  academicSemesterTitleCodeMapper,
+} from './academicSemester.constant';
 import {
   IAcademicSemester,
   IAcademicSemesterFilter,
@@ -12,6 +17,9 @@ import { AcademicSemester } from './academicSemester.model';
 const createSemesterToDB = async (
   payload: IAcademicSemester
 ): Promise<IAcademicSemester> => {
+  if (academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
+  }
   const result = await AcademicSemester.create(payload);
   return result;
 };
@@ -101,8 +109,41 @@ const getSingleSemesterFromDB = async (
   return result;
 };
 
+const updateSemesterToDB = async (
+  id: string,
+  payload: Partial<IAcademicSemester>
+): Promise<IAcademicSemester | null> => {
+  if (
+    payload.title &&
+    payload.code &&
+    academicSemesterTitleCodeMapper[payload.title] !== payload.code
+  ) {
+    throw new ApiError(
+      httpStatus.BAD_REQUEST,
+      'Invalid Semester Code or Title'
+    );
+  }
+
+  const result = await AcademicSemester.findByIdAndUpdate(
+    { _id: id },
+    payload,
+    { new: true }
+  );
+  return result;
+};
+
+const deleteSemesterFromDB = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findByIdAndDelete(id);
+  return result;
+};
+
 export const AcademicSemesterService = {
   createSemesterToDB,
   getAllSemesterFromDB,
   getSingleSemesterFromDB,
+  updateSemesterToDB,
+  deleteSemesterFromDB,
 };
+// 648c4c77fee4a4316320a040

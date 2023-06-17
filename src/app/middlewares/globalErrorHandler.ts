@@ -49,12 +49,12 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     errorMessages = simplifiedError.errorMessages;
   }
   // Normal Error
-  else if (error instanceof Error) {
-    message = error?.message;
-    errorMessages = error?.message
-      ? [{ path: '', message: error?.message }]
-      : [];
-  }
+  // else if (error instanceof Error) {
+  //   message = error?.message;
+  //   errorMessages = error?.message
+  //     ? [{ path: '', message: error?.message }]
+  //     : [];
+  // }
   // else error
   res.status(statusCode).json({
     success: false,
