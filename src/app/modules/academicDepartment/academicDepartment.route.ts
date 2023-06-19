@@ -20,6 +20,7 @@ router.patch(
   AcademicDepartmentController.updateDepartment
 );
 router.get('/:id', AcademicDepartmentController.getSingleDepartment);
+router.delete('/:id', AcademicDepartmentController.deleteDepartment);
 
 router.get('/', AcademicDepartmentController.getAllAcademicDepartment);
 
