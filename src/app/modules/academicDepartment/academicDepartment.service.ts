@@ -78,8 +78,23 @@ const getSingleDepartmentFromDB = async (
   return result;
 };
 
+const updateDepartmentToDB = async (
+  id: string,
+  payload: Partial<IAcademicDepartment>
+): Promise<IAcademicDepartment | null> => {
+  const result = await AcademicDepartment.findOneAndUpdate(
+    { _id: id },
+    payload,
+    {
+      new: true,
+    }
+  ).populate('academicFaculty');
+  return result;
+};
+
 export const AcademicDepartmentService = {
   createDepartmentToDB,
   getAllDepartmentFromDB,
   getSingleDepartmentFromDB,
+  updateDepartmentToDB,
 };
