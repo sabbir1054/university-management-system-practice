@@ -71,7 +71,15 @@ const getAllDepartmentFromDB = async (
   };
 };
 
+const getSingleDepartmentFromDB = async (
+  id: string
+): Promise<IAcademicDepartment | null> => {
+  const result = await AcademicDepartment.findById(id);
+  return result;
+};
+
 export const AcademicDepartmentService = {
   createDepartmentToDB,
   getAllDepartmentFromDB,
+  getSingleDepartmentFromDB,
 };

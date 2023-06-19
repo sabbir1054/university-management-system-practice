@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
+import { paginationFields } from '../../../constants/paginationFields';
 import catchAsync from '../../../shared/catchAsync';
+import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
+import { academicDepartmentFilterableFields } from './academicDepartment.constants';
 import { IAcademicDepartment } from './academicDepartment.interface';
 import { AcademicDepartmentService } from './academicDepartment.service';
-import { paginationFields } from '../../../constants/paginationFields';
-import pick from '../../../shared/pick';
-import { academicDepartmentFilterableFields } from './academicDepartment.constants';
 
 const createAcademicDepartment = catchAsync(
   async (req: Request, res: Response) => {
@@ -46,7 +46,19 @@ const getAllAcademicDepartment = catchAsync(
   }
 );
 
+const getSingleDepartment = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const result = await AcademicDepartmentService.getSingleDepartmentFromDB(id);
+  sendResponse<IAcademicDepartment>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Department retrieved successfully',
+    data: result,
+  });
+});
+
 export const AcademicDepartmentController = {
   createAcademicDepartment,
   getAllAcademicDepartment,
+  getSingleDepartment,
 };
