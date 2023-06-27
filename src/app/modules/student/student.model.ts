@@ -29,21 +29,19 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
     gender: {
       type: String,
       enum: gender,
-      required: true,
     },
     dateOfBirth: {
       type: String,
-      required: true,
     },
     email: {
       type: String,
-      required: true,
       unique: true,
+      required: true,
     },
     contactNo: {
       type: String,
-      required: true,
       unique: true,
+      required: true,
     },
     emergencyContactNo: {
       type: String,
@@ -62,6 +60,7 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
       required: true,
     },
     guardian: {
+      required: true,
       type: {
         fatherName: {
           type: String,
@@ -92,9 +91,9 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
           required: true,
         },
       },
-      required: true,
     },
     localGuardian: {
+      required: true,
       type: {
         name: {
           type: String,
@@ -113,7 +112,6 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
           required: true,
         },
       },
-      required: true,
     },
     academicFaculty: {
       type: Schema.Types.ObjectId,
@@ -126,12 +124,13 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
       required: true,
     },
     academicSemester: {
-      type: Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId, // academicSemester --> _id
       ref: 'AcademicSemester',
       required: true,
     },
     profileImage: {
       type: String,
+      // required: true,
     },
   },
   {
@@ -141,5 +140,9 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
     },
   }
 );
+
+// StudentSchema.index({
+//   bloodGroup: 1,
+// });
 
 export const Student = model<IStudent, StudentModel>('Student', StudentSchema);
