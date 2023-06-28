@@ -88,6 +88,7 @@ const updateFacultyToDB = async (
   if (name && Object.keys(name).length > 0) {
     Object.keys(name).forEach(key => {
       const nameKey = `name.${key}` as keyof Partial<IFaculty>;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (updatedFacultyData as any)[nameKey] = name[key as keyof typeof name];
     });
   }
