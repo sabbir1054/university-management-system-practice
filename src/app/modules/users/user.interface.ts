@@ -12,6 +12,7 @@ export type IUser = {
   faculty?: Types.ObjectId | IFaculty;
   admin?: Types.ObjectId | IAdmin;
   needsPasswordChange: true | false;
+  passwordChangedAt?: Date;
 };
 /* This was instance method rule */
 // export type IUserMethods = {
