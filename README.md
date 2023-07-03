@@ -1,8 +1,8 @@
 # University Management Auth Service
 
-
-
 This is the documentation for the Authentication Service component of the University Management System. The Authentication Service provides authentication and authorization functionalities for the three main roles in the system: Admin, Student, and Faculty. It is built using TypeScript, Express.js, Zod validation, and MongoDB.
+
+---
 
 ## Functional Requirements
 
@@ -96,8 +96,15 @@ This is the documentation for the Authentication Service component of the Univer
 - `POST /auth/login`
 - `POST /auth/change-password`
 - `POST /auth/refresh-token`
-  _Use /api/v1/ before the endpoints_
+
+---
+
+> **_NOTE:_** _Use /api/v1/ before the endpoints_
 
 ### Live Link: https://university-management-system-practice.vercel.app/
 
 Postman Documentation: [Click Here](https://documenter.getpostman.com/view/21536364/2s93zCZ1Fz)
+
+---
+> **_NOTE:_** The code structure follows the guidelines from the course by(Programming Hero), but I have made some modifications and improvements.
+---
